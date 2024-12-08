@@ -8,10 +8,24 @@ const weatherIcon = document.querySelector(".weather-icon");
 const backgroundMusic = document.getElementById("backgroundMusic");
 
 // Ensure background music plays automatically
-window.addEventListener("load", () => {
-    // Check if the audio is ready to play
-    if (backgroundMusic) {
-        backgroundMusic.play();
+// window.addEventListener("load", () => {
+//     // Check if the audio is ready to play
+//     if (backgroundMusic) {
+//         backgroundMusic.play();
+//     }
+// });
+searchBtn.addEventListener("click", () => {
+    const city = searchBox.value.trim();
+    if (city !== "") {
+        // Check the weather
+        checkWeather(city);
+        
+        // Play the background music
+        if (backgroundMusic.paused) {
+            backgroundMusic.play().catch(error => {
+                console.error("Audio playback failed:", error);
+            });
+        }
     }
 });
 
