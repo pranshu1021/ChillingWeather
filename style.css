@@ -1,0 +1,171 @@
+*{
+    margin: 0;
+    padding:0;
+    font-family: "Popins", sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #222;
+}
+
+.card{
+    width: 90%;
+    max-width: 470px;
+    color: #fff;
+    margin: 100px auto 0;
+    border-radius: 20px;
+    padding: 40px 35px;
+    text-align: center;
+    background: linear-gradient(135deg, #00feba, #5b548a); /* Default gradient */
+    transition: background 5s ease-in-out; /* Smooth transition for background */
+}
+@keyframes gradientChange {
+    0% {
+        background: linear-gradient(135deg, #00feba, #5b548a);
+    }
+    25% {
+        background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Warm gradient */
+    }
+    50% {
+        background: linear-gradient(135deg, #6a11cb, #2575fc); /* Blue gradient */
+    }
+    75% {
+        background: linear-gradient(135deg, #ff8c00, #ff6a00); /* Orange gradient */
+    }
+    100% {
+        background: linear-gradient(135deg, #00feba, #5b548a); /* Back to original */
+    }
+}
+#bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Ensure it stays behind the card */
+}
+.search{
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+
+}
+.search input{
+    border: 0;
+    outline: 0;
+    background: #ebfffc;
+    color: #555;
+    padding: 10px 25px;
+    height: 60px;
+    border-radius:30px;
+    flex:1;
+    margin-right: 16px;
+    font-size: 18px;
+}
+.website-title {
+    position: fixed;       /* Fix the title at the top */
+    top: 10px;             /* Position it 10px from the top */
+    left: 20px;            /* Fix the title to the left side with a 20px margin */
+    font-size: 32px;       /* Adjust font size */
+    font-weight: bold;     /* Make the font bold */
+    font-family: "Poppins", sans-serif; /* Use the desired font */
+    color: white;          /* Set the color of the text */
+    z-index: 1000;         /* Ensure it's above other content */
+    letter-spacing: 1px;   /* Add spacing between letters */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Add shadow for better visibility */
+}
+.search button{
+    border:0;
+    outline: 0;
+    background: #ebfffc;
+    border-radius:50%;
+    width:60px;
+    height: 60px;
+    cursor:pointer;
+
+}
+
+
+.search button img{
+    width:16px;
+}
+
+.weather-icon{
+    width:170px;
+    margin-top:30px;
+
+}
+
+.weather h1{
+    font-size: 80px;
+    font-weight: 500;
+
+
+}
+
+.weather h2{
+    font-size: 45px;
+    font-weight: 400;
+    margin-top: -10px;
+}
+
+.details{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    margin-top: 50px;
+}
+
+.col{
+    display: flex;
+    align-items: center;
+    text-align: left;
+
+}
+
+.col img{
+    width:40px;
+    margin-right:10px;
+
+}
+
+.humidity,.wind{
+    font-size:20px;
+    margin-top:-6px;
+
+}
+
+.weather{
+    display: none;
+
+}
+
+.error{
+    text-align: left;
+    margin-left: 10px;
+    font-size: 14px;
+    margin-top: 10px;
+    display: none;
+    color: red;
+}
+footer {
+    background-color: #222; /* Dark background color */
+    color: #fff;            /* White text */
+    text-align: center;     /* Center align the text */
+    padding: 20px 0;        /* Add some padding */
+    position: fixed;        /* Fix it to the bottom */
+    width: 100%;            /* Full width */
+    bottom: 0;              /* Position it at the bottom */
+    font-size: 14px;        /* Small text */
+}
+
+
+@media screen and (max-width: 600px) {
+    footer {
+        font-size: 12px;
+    }
+}

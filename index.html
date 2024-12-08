@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel= "shortcut icon" href="img/clear.png" />
+</head>
+<body>
+    <div class="website-title">
+        <u>ChillingWeather</u> 
+    </div>
+    
+    <!-- Background Video -->
+    <video autoplay muted loop id="bg-video">
+        <source src="bgvideo/1200bgvid.mp4" type="video/mp4">
+    </video>
+    
+    <div class="card">
+        <div class="search">
+            <input type="text" placeholder="Enter city name" spellcheck="false">
+            <button><img src="img/search.png" alt="search"></button>
+        </div>
+        
+        <!-- Error Message -->
+        <div class="error" style="display: none;">
+            <p>Invalid city name. Please check your spelling again.</p>
+        </div>
+        
+        <!-- Weather Info (Initially hidden) -->
+        <div class="weather" style="display: none;">
+            <img src="img/rain.png" class="weather-icon" alt="Weather Icon">
+            <h1 class="temp">22°C</h1>
+            <h2 class="city">City Name</h2>
+            <div class="details">
+                <div class="col">
+                    <img src="img/humidity.png" alt="Humidity Icon">
+                    <div>
+                        <p class="humidity">50%</p>
+                        <p>Humidity</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <img src="img/wind.png" alt="Wind Icon">
+                    <div>
+                        <p class="wind">15 km/h</p>
+                        <p>Wind speed</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Background Music -->
+    <audio id="backgroundMusic" loop>
+        <source src="bgbeats/bgbeats.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script src="script.js"></script>
+    
+    <footer>
+        <p>Made by <strong>Pranshu Gupta</strong> | Company: <strong>FineWork LMD</strong></p>
+    </footer>
+</body>
+</html>
